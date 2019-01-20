@@ -40,13 +40,11 @@ function makeBusiness ({
     employersNames = 'Юрий'}) {
     // В переменную 'sumSponsors' заносим массивы из объекта sponsors + неожиданный спонсор
     let sumSponsors = [...sponsors.eu, ...sponsors.rus, 'unexpected sponsor'];
-    console.log(`Наш бизнес. Владелец: ${owner}, директор: ${director}. Наш бюджет: ${money}. И наши работодатели: ${employersNames}`);
+    console.log(`Наш бизнес. Владелец: ${owner}, директор: ${director}. Наш бюджет: ${money}. И наши работники: ${employersNames}`);
     console.log(`Наши спонсоры: `);
     console.log(...sumSponsors);
     console.log(`Замечание. Будьте осторожны с ${sponsors.eu[0]}. Есть большой риск.`);
 };
 
-makeBusiness({
-    own: 'Sam',
-    employersNames: employersNames    
-});
+makeBusiness();
+

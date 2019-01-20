@@ -1,5 +1,5 @@
 function button() {
-    return 'button';
+    console.log('button');
 }
 
 // Класс слайдера
@@ -21,3 +21,20 @@ class Slider {
         console.log(this.width, this.height, this.count);
     }
 }
+
+// Наследование класса Slider > AutoSlider
+class AutoSlider extends Slider {
+    constructor(width, height, count, auto) {
+        // Перенос свойств Slider > AutoSlider
+        super(width, height, count);
+        this.auto = auto;
+    }
+    // Новый метод 
+    play() {
+        console.log(`Autoplay: ${this.auto}`);
+    }
+}
+
+// const slider = new AutoSlider(500, 500, 4, true);
+// slider.whoAmI();
+// slider.play();
